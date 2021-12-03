@@ -7,10 +7,11 @@
   align-items: flex-end;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  height: 35vh;
+  height: 10vh;
   background-color: blueviolet;
   color: white;
-  padding-bottom: 10vh;
+  padding-top: 15vh;
+  padding-bottom: 2vh;
 }
 
 .logo-wrapper{
