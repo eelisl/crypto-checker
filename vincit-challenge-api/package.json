@@ -1,0 +1,22 @@
+{
+  "name": "vincit-challenge-api",
+  "version": "1.0.0",
+  "description": "API for vincit challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crypto",
+    "api"
+  ],
+  "author": "Eelis Loikkanen",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,194 @@
+.form-wrapper{
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  color: white;
+  padding-bottom: 5vh;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.screen{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+    color: white;
+}
+
+
+label{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.label-text{
+  width: 10rem;
+}
+
+.invalid{
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.calendar-date{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.submit-button{
+  background-color: blueviolet;
+  border: 1px solid white;
+  font-size: calc(1rem + 1vw);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0.2rem 0.2rem black;
+}
+
+.submit-button:hover{
+  background-color: white;
+  color: blueviolet
+}
+
+.submit-button:active{
+  box-shadow: none;
+}
+
+.warning-container{
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(97, 30, 158);
+}
+
+/*Loading CSS*/
+
+.loading-container{
+  color: white;
+  font-size: 3rem;
+}
+
+.dot1{
+  animation: show 1.5s linear 0s infinite;
+}
+
+.dot2{
+  animation: show 1.5s linear 0.5s infinite;
+}
+
+.dot3{
+  animation: show 1.5s linear 1s infinite;
+}
+
+/*Result CSS*/
+
+.result-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(97, 30, 158);
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 24rem;
+  min-height: 20rem;
+}
+
+.result-container p{
+  font-size: 1.2rem;
+}
+
+.bold-text{
+  font-family: 'Lobster';
+  font-size: 2.2rem;
+}
+
+.result-title{
+  margin: 2rem;
+}
+
+.timemachine{
+  flex-direction: column;
+  max-width: 52rem;
+}
+
+.buy-sell-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.result-text{
+  margin: 1rem;
+  max-width: 15rem;
+}
+
+.happy{
+  background-color: darkgreen;
+}
+
+.sad{
+  background-color: darkred;
+}
+
+.back-button{
+  background-color: blueviolet;
+  border: 1px solid white;
+  font-family: 'Lobster';
+  font-size: calc(1rem + 1vw);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0.2rem 0.2rem black;
+  margin-right: 1rem;
+}
+
+.back-button:hover{
+  background-color: white;
+  color: blueviolet
+}
+
+.back-button:active{
+  box-shadow: none;
+}
+
+.contact{
+  background: black
+}
+
+/*Animations (mainly used in loading)*/
+
+@keyframes show {
+  0%{
+    display: 0;
+  }
+
+  33%{
+    display: 1
+  }
+
+  67%, 100%{
+    display: 0;
+  }
+}

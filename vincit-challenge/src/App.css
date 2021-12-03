@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  height: 35vh;
+  background-color: blueviolet;
+  color: white;
+  padding-bottom: 10vh;
+}
+
+.logo-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.bitcoin-icon{
+  font-size: 5rem;
+  margin-right: 2rem;
+}
+
+
+.animation-fade{
+  animation: fade-in 3s ease-in-out 0s;
+}
+
+.animation-fade-in{
+  animation: fade 1.5s ease-in-out 0s;
+}
+
+
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  40%, 60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0
+  }
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
