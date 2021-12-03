@@ -63,8 +63,9 @@ app.post('/', async (req, res, next) => {
                                 i+=23                            
                             }
                             
-                        }
+                        }else{
                         array[idx].push(data[key][i])
+                        }
                     }
                 }
                 idx++
