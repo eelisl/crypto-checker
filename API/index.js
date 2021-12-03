@@ -46,7 +46,7 @@ app.post('/', async (req, res, next) => {
                 array.push([])
 
                 //loop through every index in current object key, 
-                for(let i = 0; i<data[key].length; i++)
+                for(let i = 0; i<data[key].length; i++){
 
                     var currentDateInArray = new Date(data[key][i][0])
                     
@@ -67,9 +67,9 @@ app.post('/', async (req, res, next) => {
                         }
                     }
                 }
-
-                //Add one to index, so we can keep track of current array inside the for loop
-                idx++  
+            }
+            //Add one to index, so we can keep track of current array inside the for loop
+             idx++  
         })
         .catch(error => {
             console.log(error)
