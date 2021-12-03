@@ -27,6 +27,7 @@ form{
 
 label{
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-evenly;
     text-align: left;
