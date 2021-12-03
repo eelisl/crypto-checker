@@ -21,6 +21,7 @@ app.post('/', async (req, res, next) => {
     const to = new Date(req.body.to).getTime() / 1000 + 3600;
     const currentdate = new Date();
     
+    console.log(from + to)
     //Set variables
     var data = ''
     var array = []
@@ -41,7 +42,6 @@ app.post('/', async (req, res, next) => {
 
             //for every entry in requested data object
             for (var key in data){
-                
                 //push a new empty array for easier datahandling
                 array.push([])
 
@@ -52,29 +52,29 @@ app.post('/', async (req, res, next) => {
                     
                     //Check if current data entry date's hour is 0
                     if(currentDateInArray.getUTCHours() === 0){   
-                        array[idx].push(data[key][i])
                         //are the requested date inputs under 90 days apart
                         if(to - from < 7776000 ){
-                        
                             //are the requested date inputs under 1 day apart
                             if(to - from < 86400 ){
-                                //Skip other dates 
+                                array[idx].push(data[key][i])
                                 i+=287
                             }else{
-                                //Skip other dates
+                                array[idx].push(data[key][i])
                                 i+=23                            
                             }
+                            
                         }
+                        array[idx].push(data[key][i])
                     }
                 }
-            }
-            //Add one to index, so we can keep track of current array inside the for loop
-             idx++  
+                idx++
+            }  
         })
         .catch(error => {
             console.log(error)
         })
-    
+
+    console.log(array)
         //A
     const bear = await longestBearingRange(array[0])
     //B
@@ -117,32 +117,33 @@ const longestBearingRange = (data) => {
     let maxBearMarket = 0
     let currentBearMarket = 0
     var log = []
-    let i = 0
-    while(i <= data.length){
-        log.push(new Date(data[i][0]).toLocaleDateString);       
-        let next = data[i+1]
-        let now = data[i]
+    let index = 0
+
+    while(index <= data.length){
+        log.push(new Date(data[index][0]).toLocaleDateString);       
+        let next = data[index+1]
+        let now = data[index]
         
-        if(i+1 >= data.length){
+        if(index+1 >= data.length){
             return (
                 {
                     "maxBearMarket": maxBearMarket,
                     "log": log
                 }
             )
-        }
-
-        if(next[1] < now[1]){
-            currentBearMarket++
         }else{
-            currentBearMarket = 0
-        }
+            if(next[1] < now[1]){
+                currentBearMarket++
+            }else{
+                currentBearMarket = 0
+            }
 
-        if(currentBearMarket > maxBearMarket){
-            maxBearMarket = currentBearMarket
-        }
+            if(currentBearMarket > maxBearMarket){
+                maxBearMarket = currentBearMarket
+            }
 
-        i++;
+            index++;
+        }
     }
 }
 
