@@ -1,6 +1,4 @@
-# Vincit Rising Star -challenge
-
-This is my attempt at Vincit Rising Star - pre-requisite challenge.
+# Crypto Checker
 
 ## Challenge
 
@@ -12,7 +10,6 @@ Instructions also included in the root of this project if the support for the pd
 
 - Practice making fullstack apps
 - Widen the portfolio
-- Maybe land a job with Vincit
 
 ## What the APP does
 
