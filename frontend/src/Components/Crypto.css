@@ -1,5 +1,5 @@
 .form-wrapper{
-  min-height: 50vh;
+  min-height: 68vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,7 @@ form{
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
+  padding-top: 0rem;
 }
 
 .screen{

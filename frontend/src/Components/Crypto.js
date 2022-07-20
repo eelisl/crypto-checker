@@ -71,7 +71,7 @@ export default function Crypto() {
 
             //Using axios for API requests. Docs: https://axios-http.com/docs/intro
 
-            axios.post('http://localhost:4000', dates)
+            axios.post('https://cryptoapi.eelisloikkanen.fi', dates)
                 .then((res) => {
                     setData(res.data)
                 }).catch((error) => {
